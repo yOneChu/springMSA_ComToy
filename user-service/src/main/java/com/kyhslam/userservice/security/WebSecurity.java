@@ -30,6 +30,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
         //http.authorizeRequests().antMatchers("/**").permitAll();
+        http.authorizeRequests().antMatchers("/actuator/**").permitAll();
         http.authorizeRequests().antMatchers("/**")
                 .hasIpAddress("127.0.0.1")
                 .and()
@@ -45,6 +46,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 
         return authenticationFilter;
     }
+
 
     //인증
     //select pwd from users where email = ?
