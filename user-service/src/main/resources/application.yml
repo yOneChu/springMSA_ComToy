@@ -38,7 +38,7 @@ greeting:
 
 logging:
   level:
-    com.kyhslam.userservice: DEBUG
+    com.kyhslam.userservice.client: DEBUG
 
 management:
   endpoints:
